@@ -1,0 +1,17 @@
+{% load static %}
+<html>
+    <h1>
+        <a href="/anc">HOME</a>
+    </h1>
+    <form method="POST" action="#">{% csrf_token %}
+        <!-- Username : <input type="text" name="uname" id="uname">
+        Password : <input type="text" name="pwd" id="pwd"> -->
+        {{ logform.as_p }}
+        <button type="submit">Login</button>
+    </form>
+    {{ pwderror }}
+    <h1>User list</h1>
+    {% for x in stds %}
+        {{x}}
+    {% endfor  %}
+</html>

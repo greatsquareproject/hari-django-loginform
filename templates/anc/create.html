@@ -1,0 +1,22 @@
+{% load  static %}
+<html>
+<head>
+    <title>create</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Create New Student Record</h1>
+    <form method="POST" action="#"> {% csrf_token %}
+    <!-- Roll no : <input type="text" name="roll_no">
+    Name : <input type="text" name="name">
+    Year : <input type="text" name="s_year">
+    Section : <input type="text" name="s_sec">
+    Department : <input type="text" name="s_dep"> -->
+    {{ stdform.as_p }}
+    <button type="submit">SAVE</button>
+    </form>
+    <a href="/anc">BACK</a>
+</body>    
+
+
+</html>

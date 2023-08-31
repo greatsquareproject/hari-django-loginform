@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <title>Practice</title>
+
+    
+</head>
+<body>
+    <div class="flex-container">
+        <form>
+             
+
+            <div><label for="su_username">Username</label></div>
+            <div><input type="text" id="su_username"></div>
+            <div><label for="su_password" >Password</label></div>
+            <div><input type="text" id="su_password"></div>
+            
+            <div><label for="su_cm_password">Confirm Password</label></div>
+            <div><input type="text" id="su_cm_password"></div>
+            
+            
+            
+            
+        </form>
+        <div><button onclick="signup()" id="sbtn">Signup</button></div>
+        <p>already have an account?<a id="backbtn" href="/anc/login">login</a></p>
+        <a id="backbtn" href="/anc">Back</a>
+    </div>
+    <script  src="{%  static 'js/validateform.js' %}"></script>
+
+    
+</body>
+</html>

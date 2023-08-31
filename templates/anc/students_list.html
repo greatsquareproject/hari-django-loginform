@@ -1,0 +1,41 @@
+{% load  static %}
+<html>
+<head>
+    <title>students list</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Students List</h1>
+    <h3>New Record <a href="create/">Create</a></h3>
+    <h3>Test login to account <a href="testlogin/">TestLogin</a></h3>
+    <h3>login to account <a href="login/">Login</a></h3>
+    <h3>create account <a href="signup/">Signup</a></h3>
+    <table>
+        <tr>
+
+            <td>Roll no</td>
+            <td>Name</td>
+            <td>Year</td>
+            <td>Section</td>
+            <td>Department</td>
+            <td>Password</td>
+        </tr>
+        {% for x in students %}
+        <tr>
+
+            <td>{{ x.roll_no }}</td>
+            <td>{{ x.name }}</td>
+            <td>{{ x.s_year }}</td>
+            <td>{{ x.s_sec }}</td>
+            <td>{{ x.s_dep }}</td>
+            <td>{{ x.password }}</td>
+            <td><a href="update/{{ x.id }}">Update</a></td>
+            <td><a href="delete/{{ x.id }}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">BACK</a>
+</body>    
+
+
+</html>

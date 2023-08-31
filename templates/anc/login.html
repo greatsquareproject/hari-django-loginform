@@ -1,0 +1,29 @@
+{% load  static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+</head>
+<body>
+    
+    
+    <div class="flex-container">
+        <form>
+            <div><label for="li_username">Username</label></div>
+            <div><input type="text" id="li_username"/></div>
+            <div><label for="li_password">Password</label></div>
+            <div><input type="password" id="li_password"/></div>
+            
+        </form>
+        <div><button onclick="login()" id="lbtn">Login</button></div>
+        <p>don't have an account?<a id="backbtn" href="/anc/signup">signup</a></p>
+        <a id="backbtn" href="/anc">Back</a>
+    </div>
+    <script  src="{%  static 'js/validateform.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{% load  static %}
+<html>
+<head>
+    <title>update</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Update Student Details</h1>
+    <form method="POST" action="#">{% csrf_token %}
+    Roll no : <input type="text" name="roll_no" value="{{ student.roll_no }}">
+    Name : <input type="text" name="name" value="{{ student.name }}">
+    Year : <input type="text" name="s_year" value="{{ student.s_year }}">
+    Section : <input type="text" name="s_sec" value="{{ student.s_sec }}">
+    Department : <input type="text" name="s_dep" value="{{ student.s_dep }}">
+    Password : <input type="text" name="password" value="{{ student.password}}">
+    <button type="submit">SAVE</button>
+    </form>
+    <a href="/anc">BACK</a>
+</body>    
+
+
+</html>
