@@ -6,7 +6,7 @@ from .forms import Std_form
 from .forms import LogCredent as lcr
 
 def home(request):
-    return HttpResponse('Hello world')
+    return render(request, 'anc/home.html')
 
 def students_list(request):
     students = Students.objects.all().values()
